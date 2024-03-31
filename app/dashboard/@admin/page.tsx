@@ -32,10 +32,17 @@ import { ModeToggle } from "@/components/ui/toggle-mode";
 import { LogOut } from "lucide-react";
 import Link from "next/link";
 import Loading from "@/app/loading";
+import Image from "next/image";
+import Logo from "@/public/Sebrae.svg";
 
 export default function Page() {
   return (
     <>
+    <div
+        className={cn("absolute top-2 left-20 animate__animated animate__fadeIn")}
+      >
+        <Image src={Logo} width={80} height={80} alt={""} />
+      </div>
       <div className="h-screen animate__animated animate__fadeIn">
         <div className="grid grid-rows-[4rem_auto_5rem] grid-cols-[15%_85%] text-[1.5rem] h-full [@media(max-width:480px)]:grid-rows-[_6rem_auto_6rem] [@media(max-width:480px)]:grid-cols-[1fr]">
           <nav className="col-[2_/_4] border-b-2 border-b-blue-800 dark:border-b-white">
@@ -203,7 +210,7 @@ export default function Page() {
           </aside>
           <main className=" row-start-2 row-span-3 flex justify-center items-center [@media(max-width:480px)]:col-[1_/_1] p-4 ">
             <div className="h-full w-full rounded-md flex justify-center items-center">
-              <Loading />
+              {/* <Loading /> */}
             </div>
           </main>
         </div>

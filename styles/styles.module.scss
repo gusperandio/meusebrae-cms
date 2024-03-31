@@ -493,3 +493,10 @@
 .banter_loader__box:nth-child(9) {
   animation: moveBox-9 4s infinite;
 }
+
+.main{
+  background-image: url('../public/Shiny\ Overlay.svg');
+  background-size: cover;
+  background-position: top left;
+  background-repeat: no-repeat;
+}
