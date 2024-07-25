@@ -53,6 +53,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { Container } from "@/components/charts/Container";
 
 export default function Page() {
   return (
@@ -220,7 +221,7 @@ export default function Page() {
                 <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
                 <Input
                   type="search"
-                  placeholder="Search products..."
+                  placeholder="Buscar ferramenta"
                   className="w-full appearance-none bg-background pl-8 shadow-none md:w-2/3 lg:w-1/3"
                 />
               </div>
@@ -336,7 +337,7 @@ export default function Page() {
           </div>
           <div className="grid gap-4 md:gap-8 lg:grid-cols-2 xl:grid-cols-3">
             <Card className="xl:col-span-2">
-              <CardHeader className="flex flex-row items-center">
+              {/* <CardHeader className="flex flex-row items-center">
                 <div className="grid gap-2">
                   <CardTitle>Transactions</CardTitle>
                   <CardDescription>
@@ -470,11 +471,12 @@ export default function Page() {
                     </TableRow>
                   </TableBody>
                 </Table>
-              </CardContent>
+              </CardContent> */}
+              <Container />
             </Card>
             <Card>
               <CardHeader>
-                <CardTitle>Recent Sales</CardTitle>
+                <CardTitle>Cadastros Recentes</CardTitle>
               </CardHeader>
               <CardContent className="grid gap-8">
                 <div className="flex items-center gap-4">

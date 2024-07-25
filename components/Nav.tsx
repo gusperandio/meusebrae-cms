@@ -23,7 +23,7 @@ export default function Nav() {
               width={100}
               height={24}
               priority
-            />
+            />  
           </a>
         </div>
       </div>
@@ -42,7 +42,6 @@ export default function Nav() {
       <div>
         <li>Toggle Button Here</li>
       </div>
-      
     </main>
   );
 }

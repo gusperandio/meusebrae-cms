@@ -17,16 +17,15 @@ const regional = [
   "UAR",
   "UCF",
   "UCS",
-  "UGP",
   "UGE",
   "UGIP",
+  "UGP",
   "UIC",
   "UMC",
   "UTIC",
   "Regional Centro",
   "Regional Curitiba",
-  "Regional Leste",
-  "Regional Leste- São José",
+  "Regional Leste", 
   "Regional Noroeste",
   "Regional Norte",
   "Regional Oeste",
@@ -37,7 +36,7 @@ export function SelectRegional() {
   return (
     <Select>
       <SelectTrigger className="w-[180px]">
-        <SelectValue placeholder="Selecione sua Regional" />
+        <SelectValue placeholder="Selecione sua Unidade" />
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>

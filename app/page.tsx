@@ -10,8 +10,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import styles from "../styles/styles.module.scss";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input"; 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Textarea } from "@/components/ui/textarea";
@@ -22,13 +21,14 @@ import Logo from "@/public/Sebrae.svg";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { useRouter } from "next/navigation";
+import { Label } from "@/components/ui/label"
 
 export default function Home() {
   const router = useRouter();
   const [anime, setAnime] = useState("animate__fadeIn");
   const saveSettings = async (): Promise<boolean> => {
     await new Promise((resolve) => setTimeout(resolve, 1500));
-    // throw new Error('This is an example exception');
+    //throw new Error('This is an example exception');
     return false;
   };
 
@@ -57,6 +57,14 @@ export default function Home() {
       router.push("dashboard");
     }, 1000);
   };
+  // const handleChange = (event: any) => {
+  //   const text = event.target.value;
+  //   const lastChar = text[text.length - 1]; // Pega o último caractere digitado
+  //   if (lastChar === "@") {
+  //     event.target.value += "pr.sebrae.com.br";
+  //     event.target.setSelectionRange(text.length + 12, text.length + 12);
+  //   }
+  // };
 
   return (
     <div className={styles.main}>
@@ -89,7 +97,11 @@ export default function Home() {
               <CardContent className="space-y-2">
                 <div className="space-y-1">
                   <Label htmlFor="email">Email</Label>
-                  <Input id="email" placeholder="exemplo@pr.sebrae.com.br" required/>
+                  <Input
+                    id="email"
+                    placeholder="exemplo@pr.sebrae.com.br"
+                    required
+                  />
                 </div>
                 <div className="space-y-1">
                   <Label htmlFor="username">Senha</Label>
@@ -126,14 +138,21 @@ export default function Home() {
               <CardContent className="space-y-2">
                 <div className="space-y-1">
                   <Label htmlFor="email">Email</Label>
-                  <Input id="email" placeholder="exemplo@pr.sebrae.com.br" required/>
+                  <Input
+                    id="email"
+                    placeholder="exemplo@pr.sebrae.com.br"
+                    required
+                  />
                 </div>
                 <div className="space-y-1">
                   <Label htmlFor="new">Motivo</Label>
-                  <Textarea placeholder="Especifique o motivo do seu acesso ao CMS" required></Textarea>
+                  <Textarea
+                    placeholder="Especifique o motivo do seu acesso ao CMS"
+                    required
+                  ></Textarea>
                 </div>
                 <div className="space-y-1">
-                  <Label htmlFor="current">Regional</Label>
+                  <Label htmlFor="current">Unidade ou Regional</Label>
                   <SelectRegional />
                 </div>
               </CardContent>
