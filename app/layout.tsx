@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { Alegreya_Sans } from "next/font/google";
-import "../styles/globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
+import "./globals.css";
+import { ThemeProvider } from "@/components/layout/theme-provider";
+
+
 const als = Alegreya_Sans({
-  weight: ['500', '700'],
-  subsets: ['latin'],
-})
+  weight: ["500"],
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Meu Sebrae - CMS",
@@ -31,14 +33,8 @@ export default function RootLayout({
         />
       </head>
       <body className={als.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider></body>
+        {children}
+      </body>
     </html>
   );
 }

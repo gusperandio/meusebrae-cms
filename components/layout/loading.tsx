@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import styles from "@/styles/styles.module.scss";
-export default function Loading() {
+export function Loading() {
   return (
     <div className={styles.banter_loader}>
       <div className={cn(styles.banter_loader__box, "before:bg-blue-600 dark:before:bg-white")}></div>

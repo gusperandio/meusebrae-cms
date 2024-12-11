@@ -1,8 +1,7 @@
-
-
 function checkUserRole(){
-  return "user"
+  return "admin"
 }
+
 interface LayoutProps {
   user: React.ReactNode;
   admin: React.ReactNode; 

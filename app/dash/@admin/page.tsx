@@ -31,7 +31,6 @@ import {
 import { ModeToggle } from "@/components/ui/toggle-mode";
 import { LogOut } from "lucide-react";
 import Link from "next/link";
-import Loading from "@/app/loading";
 import Image from "next/image";
 import Logo from "@/public/Sebrae.svg";
 
