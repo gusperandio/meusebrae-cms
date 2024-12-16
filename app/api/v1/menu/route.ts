@@ -15,15 +15,15 @@ const data = {
       items: [
         {
           title: "Dashboard",
-          url: "#",
+          url: "dashboard",
         },
         {
           title: "Usuários",
-          url: "#",
+          url: "users",
         },
         {
           title: "Empresas",
-          url: "#",
+          url: "companies",
         },
       ],
     },
@@ -33,20 +33,20 @@ const data = {
       items: [
         {
           title: "Layout",
-          url: "#",
+          url: "layout",
         },
         {
           title: "Stories",
-          url: "#",
+          url: "stories",
           isActive: true,
         },
         {
           title: "PUSHs",
-          url: "#",
+          url: "pushs",
         },
         {
           title: "Banners",
-          url: "#",
+          url: "promotions",
         }, 
       ],
     },
@@ -56,15 +56,29 @@ const data = {
       items: [
         {
           title: "Eventos",
-          url: "#",
+          url: "event",
         },
         {
           title: "Palestrantes",
-          url: "#",
+          url: "speaker",
         },
          
       ],
     }, 
+    {
+      title: "Configurações",
+      url: "",
+      items: [
+        {
+          title: "Parametros",
+          url: "parameters",
+        },
+        {
+          title: "Menu",
+          url: "menu",
+        },
+      ]
+    }
   ],
 };
 

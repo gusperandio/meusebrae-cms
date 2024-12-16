@@ -54,7 +54,7 @@ export default function Home() {
   const login = () => {
     setAnime("animate__fadeOut");
     setTimeout(() => {
-      router.push("/");
+      router.push("/cms/dashboard");
     }, 1000);
   };
 

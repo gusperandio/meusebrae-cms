@@ -27,6 +27,7 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar";
 import Awards from "../widgets";
+import Link from "next/link";
 
 export function NavUser({
   user,
@@ -102,10 +103,12 @@ export function NavUser({
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>
-              <LogOut />
-              Sair
-            </DropdownMenuItem>
+            <Link href="/" legacyBehavior>
+              <DropdownMenuItem>
+                <LogOut />
+                Sair
+              </DropdownMenuItem>
+            </Link>
           </DropdownMenuContent>
         </DropdownMenu>
       </SidebarMenuItem>
