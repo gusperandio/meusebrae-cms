@@ -28,8 +28,7 @@ export function SidebarProviderUsed({ children }: { children: React.ReactNode })
       try {
         const response = await fetch("/api/v1/menu");
         const result = await response.json();
-        setData(result);
-        console.log(result)
+        setData(result); 
       } catch (error) {
         console.error("Error fetching menu data:", error);
       }
