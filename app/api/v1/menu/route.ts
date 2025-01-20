@@ -1,12 +1,11 @@
-
 import { NextResponse } from "next/server";
 
-const data = { 
+const data = {
   user: {
     name: "shadcn",
     email: "ma@example.com",
     avatar: "/avatars/shadcn.jpg",
-    level: "Prata"
+    level: "Prata",
   },
   navMain: [
     {
@@ -46,8 +45,8 @@ const data = {
         },
         {
           title: "Banners",
-          url: "promotions",
-        }, 
+          url: "banners",
+        },
       ],
     },
     {
@@ -56,15 +55,14 @@ const data = {
       items: [
         {
           title: "Eventos",
-          url: "event",
+          url: "events",
         },
         {
           title: "Palestrantes",
           url: "speaker",
         },
-         
       ],
-    }, 
+    },
     {
       title: "Configurações",
       url: "",
@@ -77,12 +75,12 @@ const data = {
           title: "Menu",
           url: "menu",
         },
-      ]
-    }
+      ],
+    },
   ],
 };
 
-export function GET(request: Request){
+export function GET(request: Request) {
   return new NextResponse(JSON.stringify(data), {
     status: 200,
     headers: {

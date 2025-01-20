@@ -18,7 +18,7 @@ import toast, { Toaster } from "react-hot-toast";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "@/public/Sebrae.svg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { useRouter } from "next/navigation";
 import { Label } from "@/components/ui/label"; 
@@ -28,13 +28,14 @@ export default function Home() {
   const router = useRouter(); 
    
 
-  
-
-  const login = () => { 
-    setTimeout(() => {
+  useEffect(() => {
+    const token = sessionStorage.getItem("token");
+    if (!token) {
+      router.push("/login");
+    } else {
       router.push("/cms/dashboard");
-    }, 1000);
-  };
+    }
+  }, [router]);
 
   return (
     <div className={styles.main}>
