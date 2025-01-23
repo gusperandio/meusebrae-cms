@@ -8,7 +8,7 @@ export default function Home() {
   const router = useRouter(); 
    
 
-  useEffect(() => {
+  useEffect(() => { 
     const token = sessionStorage.getItem("token");
     if (!token) {
       router.push("/login");

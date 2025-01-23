@@ -20,7 +20,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <SidebarProviderUsed>
       <SidebarProvider>
-      <div className="flex">
+      <div className="flex w-full">
         <AppSidebar />
         <div className="flex-1">
           <header className="flex h-16 items-center px-4">
@@ -33,8 +33,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>
-          </header>
-          <main>{children}</main>
+          </header> 
+            <main>{children}</main> 
         </div>
       </div>
       </SidebarProvider>

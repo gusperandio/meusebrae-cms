@@ -1,6 +1,7 @@
+import { NavMain } from "@/types";
 import { NextResponse } from "next/server";
 
-const data = {
+const data: NavMain = {
   user: {
     name: "shadcn",
     email: "ma@example.com",
@@ -15,14 +16,17 @@ const data = {
         {
           title: "Dashboard",
           url: "dashboard",
+          isActive: true,
         },
         {
           title: "Usuários",
           url: "users",
+          isActive: false,
         },
         {
           title: "Empresas",
           url: "companies",
+          isActive: false,
         },
       ],
     },
@@ -33,19 +37,22 @@ const data = {
         {
           title: "Layout",
           url: "layout",
+          isActive: false,
         },
         {
           title: "Stories",
           url: "stories",
-          isActive: true,
+          isActive: false,
         },
         {
           title: "PUSHs",
           url: "pushs",
+          isActive: false,
         },
         {
           title: "Banners",
           url: "banners",
+          isActive: false,
         },
       ],
     },
@@ -56,10 +63,12 @@ const data = {
         {
           title: "Eventos",
           url: "events",
+          isActive: false,
         },
         {
           title: "Palestrantes",
           url: "speaker",
+          isActive: false,
         },
       ],
     },
@@ -70,10 +79,12 @@ const data = {
         {
           title: "Parametros",
           url: "parameters",
+          isActive: false,
         },
         {
           title: "Menu",
           url: "menu",
+          isActive: false,
         },
       ],
     },

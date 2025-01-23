@@ -51,11 +51,30 @@ export default function Page() {
       }
     );
 
-  const login = () => {
+  const login = () =>
+    toast.promise(
+      saveSettings(),
+      {
+        loading: "Acessando...",
+        success: login2(),
+        error: <b>Erro ao enviar solicitação</b>,
+      },
+      {
+        duration: 2000,
+      }
+    );
+
+  const login2 = () => {
     setAnime("animate__fadeOut");
     setTimeout(() => {
       router.push("/cms/dashboard");
-    }, 1000);
+    }, 2000);
+
+    return (
+      <div>
+        <b>Bem-vindo</b>
+      </div>
+    );
   };
 
   return (
@@ -69,13 +88,10 @@ export default function Page() {
         <Image src={Logo} width={120} height={120} alt={""} />
       </div>
       <div className="flex justify-center items-center h-screen animate__animated">
-        <Tabs
-          defaultValue="account"
-          className={cn("w-[400px] animate__animated", anime)}
-        >
+        <Tabs defaultValue="account" className="w-[400px]">
           <TabsList className="grid w-full grid-cols-2">
-            <TabsTrigger value="account">Acessar</TabsTrigger>
-            <TabsTrigger value="solicitar">Solicitar Acesso</TabsTrigger>
+            <TabsTrigger value="account">Login</TabsTrigger>
+            <TabsTrigger value="register">Solicitar Acesso</TabsTrigger>
           </TabsList>
           <TabsContent value="account">
             <Card>
@@ -119,7 +135,7 @@ export default function Page() {
               </CardFooter>
             </Card>
           </TabsContent>
-          <TabsContent value="solicitar">
+          <TabsContent value="register">
             <Card>
               <CardHeader>
                 <CardTitle>Solicitar Acesso</CardTitle>
@@ -127,7 +143,7 @@ export default function Page() {
                   Para solicitar acesso utilize o seu Email corporativo
                 </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-2">
+              <CardContent className="space-y-4">
                 <div className="space-y-1">
                   <Label htmlFor="email">Email</Label>
                   <Input
@@ -143,9 +159,13 @@ export default function Page() {
                     required
                   ></Textarea>
                 </div>
-                <div className="space-y-1">
-                  <Label htmlFor="current">Unidade ou Regional</Label>
-                  <SelectRegional />
+                <div className="space-y-2 flex flex-col">
+                  <Label htmlFor="current">Unidade ou Regional</Label> 
+                  <Input
+                    id="regional"
+                    placeholder="EX: UTIC"
+                    required
+                  />
                 </div>
               </CardContent>
               <CardFooter>

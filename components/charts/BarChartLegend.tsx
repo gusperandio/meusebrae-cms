@@ -1,6 +1,6 @@
 "use client";
 
-import { TrendingUp } from "lucide-react";
+import { TrendingUp, TrendingDown } from "lucide-react";
 import { Bar, BarChart, CartesianGrid, LabelList, XAxis } from "recharts";
 
 import {
@@ -61,7 +61,7 @@ export function BarChartLegend() {
               cursor={false}
               content={<ChartTooltipContent hideLabel />}
             />
-            <Bar dataKey="desktop" fill="var(--color-desktop)" radius={8}>
+            <Bar dataKey="desktop" fill="var(--color-desktop)" radius={4}>
               <LabelList
                 position="top"
                 offset={12}
@@ -75,7 +75,7 @@ export function BarChartLegend() {
       <CardFooter className="flex-col items-start gap-2 text-sm">
         <div className="flex gap-2 font-medium leading-none">
           Trending up by 5.2% this month{" "}
-          <TrendingUp className="h-4 w-4" color="green" />
+          <TrendingDown className="h-4 w-4" color="red" />
         </div>
         <div className="leading-none text-muted-foreground">
           Showing total visitors for the last 6 months
